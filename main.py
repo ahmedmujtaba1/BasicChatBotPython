@@ -44,3 +44,4 @@ trainX = training[:, :len(words)]
 trainY = training[:, len(words):]
 
 model = tf.keras.Sequential()
+model.add(tf.keras.layers.Dense(128, input_shape=(len(trainX[0]),), activation = 'relu'))
