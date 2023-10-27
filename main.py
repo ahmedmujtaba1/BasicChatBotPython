@@ -21,4 +21,6 @@ words = [lemmatizer.lemmatize(word) for word in words if word not in ignoreLette
 words = sorted(set(classes))
 classes = sorted(set(classes))
 
-pickle.dump(words, )
+pickle.dump(words, open('words.pkl', 'wb'))
+pickle.dump(classes, open('classes.pkl', 'wb'))
+
