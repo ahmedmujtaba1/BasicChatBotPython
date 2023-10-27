@@ -33,3 +33,6 @@ for document in documents:
     wordPatterns = [lemmatizer.lemmatize(word.lower()) for word in wordPatterns]
     for word in words:
         bag.append(1) if word in wordPatterns else bag.append(0)
+    outputRow = list(outputEmpty)
+    outputRow[classes.index(document[1])] = 1
+    training.append(bag + outputRow)
