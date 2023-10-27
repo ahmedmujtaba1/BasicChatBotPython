@@ -36,3 +36,9 @@ for document in documents:
     outputRow = list(outputEmpty)
     outputRow[classes.index(document[1])] = 1
     training.append(bag + outputRow)
+
+random.shuffle(training)
+training = np.array(training)
+
+trainX = training[:, :len(words)]
+trainY = training[:, len(words):]
