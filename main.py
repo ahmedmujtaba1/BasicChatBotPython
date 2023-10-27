@@ -26,3 +26,6 @@ pickle.dump(classes, open('classes.pkl', 'wb'))
 
 training = []
 outputEmpty = [0] * len(classes)
+
+for document in documents:
+    bag = []
