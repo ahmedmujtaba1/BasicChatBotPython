@@ -42,3 +42,5 @@ training = np.array(training)
 
 trainX = training[:, :len(words)]
 trainY = training[:, len(words):]
+
+model = tf.keras.Sequential()
