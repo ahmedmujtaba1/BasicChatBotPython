@@ -29,3 +29,7 @@ outputEmpty = [0] * len(classes)
 
 for document in documents:
     bag = []
+    wordPatterns = document[0]
+    wordPatterns = [lemmatizer.lemmatize(word.lower()) for word in wordPatterns]
+    for word in words:
+        bag.append(1) if word in wordPatterns else bag.append(0)
