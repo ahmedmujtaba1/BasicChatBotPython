@@ -24,3 +24,5 @@ classes = sorted(set(classes))
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(classes, open('classes.pkl', 'wb'))
 
+training = []
+outputEmpty = [0] * len(classes)
