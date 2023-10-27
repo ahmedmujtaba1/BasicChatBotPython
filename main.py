@@ -5,5 +5,6 @@ lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 
 words = []
-words = []
-words = []
+classes = []
+documents = []
+ignoreLetters = ['!', '?','<', '.', ',']
