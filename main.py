@@ -10,4 +10,10 @@ documents = []
 ignoreLetters = ['!', '?','<', '.', ',']
 
 for intent in intents['intents']:
-    for pattern in intent['patterns']
+    for pattern in intent['patterns']:
+        wordList = nltk.word_tokenize(pattern)
+        words.extend(wordList)
+        documents.append((wordList, intent['tag']))
+        if intent['tag'] not in classes:
+            classes.append(intent['tag'])
+         
